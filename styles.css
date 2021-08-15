@@ -1,8 +1,23 @@
+body {
+  background: rgb(231, 231, 231);
+  background: linear-gradient(
+    135deg,
+    rgba(231, 231, 231, 1) 0%,
+    rgba(247, 247, 247, 1) 100%
+  );
+}
+
 .main {
+  background: rgb(207, 207, 207);
+  background: linear-gradient(
+    135deg,
+    rgba(207, 207, 207, 1) 0%,
+    rgba(230, 230, 230, 1) 100%
+  );
   width: 300;
   padding-bottom: 1%;
   padding-top: 10;
-  background-color: gainsboro;
+  /* background-color: gainsboro; */
   border-radius: 0.8rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -19,13 +34,18 @@
   width: 30;
 }
 .sidebar {
-  position: absolute;
-  background-color: gainsboro;
+  /* background-color: gainsboro; */
+  background: rgb(207, 207, 207);
+  background: linear-gradient(
+    135deg,
+    rgba(207, 207, 207, 1) 0%,
+    rgba(230, 230, 230, 1) 100%
+  );
   padding: 40 40 100 40;
   border-radius: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.callError {
+/* .callError {
   background-color: red;
   width: 300;
   border-radius: 1rem;
@@ -33,7 +53,7 @@
   visibility: hidden;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 15;
-}
+} */
 .analyse {
   font-size: 20;
   border-radius: 0.3rem;
