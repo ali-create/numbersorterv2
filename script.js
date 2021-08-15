@@ -1,12 +1,18 @@
 function findMean(arr) {
-  const arrLength = arr.length;
+  let arrLength = arr.length;
   //   console.log(arrLength);
   let acc = 0;
   //   console.log(arr);
-  for (let i = 0; i < arrLength; i++) {
+  for (let i = 0; i < arrLength; ) {
     // console.log(arr[i]);
-    acc += Number(arr[i]);
-    document.querySelector(".sum").textContent = "Total: " + acc;
+    if (arr[i] != "") {
+      acc += Number(arr[i]);
+      document.querySelector(".sum").textContent = "Total: " + acc;
+      i++;
+    } else if (arr[i] == "") {
+      arrLength--;
+      i++;
+    }
   }
   return acc / arrLength;
 }
@@ -52,7 +58,15 @@ analysebtn.addEventListener("click", function () {
   for (let i = 1; i < inputLength + 1; i++) {
     allValues.push(document.querySelector(".inputRow-" + i).value);
   }
-  if (!allValues.includes("")) {
+  let newArr = [];
+  for (const item of allValues) {
+    if (item != "") {
+      newArr.push(item);
+    }
+  }
+  allValues = newArr.slice();
+  // console.log(newArr);
+  if (true) {
     // finding mean
 
     mean.textContent = "Mean: " + findMean(allValues);
@@ -83,14 +97,15 @@ analysebtn.addEventListener("click", function () {
     }
     highest.textContent = "Highest Value: " + max;
     lowest.textContent = "Lowest Value: " + min;
-    console.log(allValues);
-  } else callError();
+    // console.log(allValues);
+  }
 });
 
-const callError = function () {
-  const callErrorElement = document.querySelector(".callError");
-  callErrorElement.style.visibility = "unset";
-  setTimeout(function () {
-    callErrorElement.style.visibility = "hidden";
-  }, 2000);
-};
+// const callError = function () {
+//   const callErrorElement = document.querySelector(".callError");
+//   callErrorElement.style.visibility = "unset";
+//   setTimeout(function () {
+//     callErrorElement.style.visibility = "hidden";
+//   }, 2000);
+// };
+// before white space removal check
