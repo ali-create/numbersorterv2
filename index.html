@@ -3,16 +3,25 @@
   <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
-  <nav class="sidebar">
-    <button class="analyse">Analyse Content</button>
-    <p class="htl">Highest to lowest</p>
-    <p class="lth">Lowest to Highest</p>
-    <p class="highest">Highest</p>
-    <p class="lowest">Lowest</p>
-    <p class="mean">Mean</p>
-    <p class="sum">Sum</p>
-  </nav>
   <center>
+    <details class="sidebar">
+      <summary>Analyse Info</summary>
+      <br />
+      <nav>
+        <button class="analyse" title="Analyse Content below.">
+          Analyse Content
+        </button>
+        <p class="htl">Highest to lowest</p>
+        <p class="lth">Lowest to Highest</p>
+        <p class="highest">Highest</p>
+        <p class="lowest">Lowest</p>
+        <p class="mean">Mean</p>
+        <p class="sum">Sum</p>
+      </nav>
+    </details>
+    <br />
+    <br />
+    <br />
     <button class="add">+</button>
     <button class="delete">-</button>
     <br />
@@ -20,13 +29,14 @@
     <div class="main">
       <!-- <div class="row-1">
         <p><input type="number" class="inputRow-1" /> Row 1</p>
-      </div> -->
-    </div>
+      </div> 
+    before whitespace removal check
+    --></div>
     <br />
     <br />
-    <div class="callError">
+    <!-- <div class="callError">
       <br />Please Remove all trailing data before analysing.
-    </div>
+    </div> -->
   </center>
   <script src="script.js"></script>
 </body>
